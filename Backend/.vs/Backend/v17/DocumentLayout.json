@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\migrations\\20250112141150_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:migrations\\20250112141150_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:serviceextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\models\\backendcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:models\\backendcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\seeds\\mainaccountseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:seeds\\mainaccountseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\seeds\\vaultseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:seeds\\vaultseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\seeds\\rolesseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:seeds\\rolesseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documentos\\github\\petty_cash_v3\\backend\\seeds\\officeseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:seeds\\officeseeds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 121,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +54,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ServiceExtensions.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\ServiceExtensions.cs",
-              "RelativeDocumentMoniker": "ServiceExtensions.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\ServiceExtensions.cs",
-              "RelativeToolTip": "ServiceExtensions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250112141150_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Migrations\\20250112141150_Initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250112141150_Initial.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Migrations\\20250112141150_Initial.cs",
+              "RelativeToolTip": "Migrations\\20250112141150_Initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T12:54:55.248Z",
+              "WhenOpened": "2025-01-12T14:11:51.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T11:52:55.165Z",
+              "WhenOpened": "2025-01-12T14:11:24.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-12T13:35:09.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BackendContext.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Models\\BackendContext.cs",
+              "RelativeDocumentMoniker": "Models\\BackendContext.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Models\\BackendContext.cs",
+              "RelativeToolTip": "Models\\BackendContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T13:30:55.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VaultSeeds.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\VaultSeeds.cs",
+              "RelativeDocumentMoniker": "Seeds\\VaultSeeds.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\VaultSeeds.cs",
+              "RelativeToolTip": "Seeds\\VaultSeeds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T13:28:39.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RolesSeeds.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\RolesSeeds.cs",
+              "RelativeDocumentMoniker": "Seeds\\RolesSeeds.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\RolesSeeds.cs",
+              "RelativeToolTip": "Seeds\\RolesSeeds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T13:25:37.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OfficeSeeds.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\OfficeSeeds.cs",
+              "RelativeDocumentMoniker": "Seeds\\OfficeSeeds.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\OfficeSeeds.cs",
+              "RelativeToolTip": "Seeds\\OfficeSeeds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T13:23:56.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainAccountSeeds.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\MainAccountSeeds.cs",
+              "RelativeDocumentMoniker": "Seeds\\MainAccountSeeds.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documentos\\Github\\Petty_Cash_V3\\Backend\\Seeds\\MainAccountSeeds.cs",
+              "RelativeToolTip": "Seeds\\MainAccountSeeds.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowEoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T13:23:13.538Z",
               "EditorCaption": ""
             }
           ]

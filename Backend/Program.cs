@@ -5,6 +5,8 @@ global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Identity;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.AspNetCore.Mvc;
+global using Newtonsoft.Json;
+global using Backend.Models;
 global using System.Data;
 
 #endregion
@@ -14,7 +16,6 @@ global using System.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Newtonsoft.Json;
 using System.Text;
 using AutoMapper;
 using Backend;
@@ -103,15 +104,15 @@ builder.Services.AddAuthorization(options =>
 
 #region Identity
 
-//builder.Services.AddDbContext<PettyCashContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("DevelopmentConnection"));
-//    options.EnableSensitiveDataLogging();
-//});
-//builder.Services.AddIdentityCore<User>()
-//    .AddRoles<IdentityRole>()
-//    .AddEntityFrameworkStores<PettyCashContext>()
-//    .AddDefaultTokenProviders();
+builder.Services.AddDbContext<BackendContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DevelopmentConnection"));
+    options.EnableSensitiveDataLogging();
+});
+builder.Services.AddIdentityCore<User>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<BackendContext>()
+    .AddDefaultTokenProviders();
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = true;
