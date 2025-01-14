@@ -19,12 +19,44 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using AutoMapper;
 using Backend;
+using Backend.Services.AuthService;
+using Backend.Services.UserService;
+using Backend.Services.VaultService;
+using Backend.Services.OfficeService;
+using Backend.Services.StatusService;
+using Backend.Services.BranchService;
+using Backend.Services.DivisonService;
+using Backend.Services.JobTitleService;
+using Backend.Services.DocumentService;
+using Backend.Services.GLAccountService;
+using Backend.Services.DepartmentService;
+using Backend.Services.AccountSetService;
+using Backend.Services.TransactionService;
+using Backend.Services.RequisitionService;
+using Backend.Services.NotificationService;
 
 #endregion
 
 var builder = WebApplication.CreateBuilder(args);
 
-#region Mapping
+#region Scoping Services and Mapping
+
+builder.Services.AddScoped<IAuth, AuthService>();
+builder.Services.AddScoped<IUser, UserService>();
+builder.Services.AddScoped<IVault, VaultService>();
+builder.Services.AddScoped<IOffice, OfficeService>();
+builder.Services.AddScoped<IStatus, StatusService>();
+builder.Services.AddScoped<IBranch, BranchService>();
+builder.Services.AddScoped<IDivision, DivisonService>();
+builder.Services.AddScoped<IJobTitle, JobTitleService>();
+builder.Services.AddScoped<IDocument, DocumentService>();
+builder.Services.AddScoped<IGLAccount, GLAccountService>();
+builder.Services.AddScoped<IDepartment, DepartmentService>();
+builder.Services.AddScoped<IAccountSet, AccountSetService>();
+builder.Services.AddScoped<ITransaction, TransactionService>();
+builder.Services.AddScoped<IRequisition, RequisitionService>();
+builder.Services.AddHostedService<PettyCashNotification>();
+builder.Services.AddHostedService<VaultNotification>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
