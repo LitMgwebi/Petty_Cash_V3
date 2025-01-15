@@ -14,7 +14,7 @@ namespace Backend.Services.DocumentService
         private IRequisition _requisition = requisition;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
-        private string GetUserName() => _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.Name)!;
+        private string GetUserName() => _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.Name)!;`       
        
         public async Task<ServerResponse<IEnumerable<Document>>> GetAllDocuments(string command, int requisitionId)
         {
