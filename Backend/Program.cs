@@ -62,25 +62,76 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 #endregion
 
+#region Identity
+
+builder.Services.AddDbContext<BackendContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DevelopmentConnection"));
+    //options.EnableSensitiveDataLogging(); 
+});
+builder.Services.AddIdentityCore<User>()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<BackendContext>()
+    .AddDefaultTokenProviders();
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 8;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredUniqueChars = 1;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20);
+});
+
+#endregion
+
+#region Auth
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CORS", o => {
+        o
+            //.WithOrigins("http://localhost:8080")
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }
+);
+});
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options => options.TokenLifespan = TimeSpan.FromMinutes(30));
+builder.Services.AddAuthentication();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("StudentAdminPolicy", policy => policy.RequireRole("Student", "Admin"));
+});
+
+
+#endregion
+
 #region General
 
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
-builder.Services.AddHttpContextAccessor();
 
 #endregion
 
 #region Controllers and SwaggerGen
 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers()
     .AddNewtonsoftJson(o =>
     {
         o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
     });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddSwaggerGen(o =>
 {
+    o.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "backend",
+        Version = "v1"
+    });
+
     o.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Scheme = "Bearer",
@@ -100,7 +151,10 @@ builder.Services.AddSwaggerGen(o =>
                 {
                     Id = "Bearer",
                     Type = ReferenceType.SecurityScheme
-                }
+                },
+                Scheme = "oauth2",
+                Name = "Bearer",
+                In = ParameterLocation.Header
             },
             new List<string>()
         }
@@ -109,74 +163,24 @@ builder.Services.AddSwaggerGen(o =>
 
 #endregion
 
-#region Auth
-
-builder.Services.AddAuthentication(o =>
-{
-    o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    o.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-});
-//.AddJwtBearer (o =>
-//{
-//    o.TokenValidationParameters = new TokenValidationParameters
-//    {
-//        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-//        ValidAudience = builder.Configuration["Jwt:Audience"],
-//        IssuerSigningKey = new Sy
-//    }
-//});
-builder.Services.AddAuthorization(options =>
-{
-    //options.AddPolicy("StudentAdminPolicy", policy => policy.RequireRole("Student", "Admin"));
-});
-
-
-#endregion
-
-#region Identity
-
-builder.Services.AddDbContext<BackendContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DevelopmentConnection"));
-    options.EnableSensitiveDataLogging();
-});
-builder.Services.AddIdentityCore<User>()
-    .AddRoles<IdentityRole>()
-    .AddEntityFrameworkStores<BackendContext>()
-    .AddDefaultTokenProviders();
-builder.Services.Configure<IdentityOptions>(options =>
-{
-    options.Password.RequireDigit = true;
-    options.Password.RequiredLength = 8;
-    options.Password.RequireUppercase = true;
-    options.Password.RequiredUniqueChars = 1;
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(20);
-});
-
-#endregion
-
 var app = builder.Build();
 
 #region Web Application
+
+app.UseCors("CORS");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
-}
-app.UseCors(options => options
-    .AllowAnyHeader()
-    .AllowAnyMethod()
-//.AllowAnyOrigin()
-//.WithOrigins("http://localhost:8080")
-);
+    app.UseSwaggerUI(options => {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "backend");
+        //options.RoutePrefix = string.Empty;
+    });
 
-app.UseRouting();
+}
 
 app.UseHttpsRedirection();
-app.UseFileServer();
 
 app.UseAuthentication();
 app.UseAuthorization();

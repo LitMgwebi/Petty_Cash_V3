@@ -38,8 +38,8 @@ namespace Backend.Controllers
 
         #region POST
 
-        [HttpPost, Route("create")]
         [Authorize(Roles = "ICT_Admin")]
+        [HttpPost, Route("create")]
         public async Task<ActionResult> Create(Glaccount glAccount)
         {
             if (!ModelState.IsValid)
@@ -54,8 +54,8 @@ namespace Backend.Controllers
 
         #region PUT
 
-        [HttpPut, Route("edit")]
         [Authorize(Roles = "ICT_Admin")]
+        [HttpPut, Route("edit")]
         public async Task<ActionResult> Edit(Glaccount glAccount)
         {
             if (!ModelState.IsValid)
@@ -70,8 +70,8 @@ namespace Backend.Controllers
 
         #region DELETE
 
-        [HttpDelete, Route("delete")]
         [Authorize(Roles = "ICT_Admin")]
+        [HttpDelete, Route("delete")]
         public async Task<ActionResult> Delete(Glaccount glAccount)
         {
             if (!ModelState.IsValid)

@@ -244,8 +244,7 @@ namespace Backend.Services.AuthService
                 new ServerResponse<string>
                 {
                     Success = false,
-                    Message = "System was unable to change your password.",
-                    Errors = result.Errors.Select(e => e.Description)
+                    Message = "System was unable to change your password."
                 };
         }
 

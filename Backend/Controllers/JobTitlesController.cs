@@ -10,7 +10,7 @@ namespace Backend.Controllers
 
         #region GET
 
-        [HttpGet, Route("index")]
+        [HttpGet("index")]
         public async Task<ActionResult> Index()
         {
             ServerResponse<IEnumerable<JobTitle>> response = await _jobTitle.GetJobTitles();

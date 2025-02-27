@@ -23,7 +23,7 @@
                      {
                          Success = true,
                          Data = Branchs,
-                         Message = "Branchs retrieved successfully."
+                         Message = "Branches retrieved successfully."
                      };
             }
             catch (Exception ex)

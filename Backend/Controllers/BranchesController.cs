@@ -4,7 +4,6 @@ namespace Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class BranchesController(IBranch branch): ControllerBase
     {
         private readonly IBranch _branch = branch;

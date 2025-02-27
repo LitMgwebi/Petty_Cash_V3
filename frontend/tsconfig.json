@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "src", // Set the base directory for imports
-    "paths": {
-      "@/*": ["*"] // Map @/ to the src/ directory
-    },
     "target": "es5",
     "lib": [
       "dom",

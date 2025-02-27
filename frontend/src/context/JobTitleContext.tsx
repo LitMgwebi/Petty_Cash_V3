@@ -1,5 +1,5 @@
 import {createContext, useContext, useState, ReactNode, FC} from "react"
-import axiosBase from "@/api/axios"
+import axios from "axios";
 
 interface JobTitle {
     jobTitleId: number;
@@ -17,8 +17,15 @@ export const JobTitleProvider: FC<{children: ReactNode}> = ({children}) => {
     const [jobTitles, setJobTitles] = useState<JobTitle[]>([]);
 
     const getJobTitles = async() => {
-        const res = await axiosBase.get('');
-        setJobTitles(res.data.data)
+        try {
+            const res = await axios({
+                url: "api/JobTitles/index",
+                method: "GET"
+            });
+            setJobTitles(res.data.data)
+        } catch(error) {
+            console.error(error)
+        }
     }
 
     return (

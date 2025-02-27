@@ -42,8 +42,8 @@ namespace Backend.Controllers
             return response.Success ? Ok(response) : BadRequest(response);
         }
 
-        [HttpPut, Route("changePassword")]
         [Authorize]
+        [HttpPut, Route("changePassword")]
         public async Task<ActionResult> ChangePassword([FromBody] ChangePassword changePassword)
         {
             if (!ModelState.IsValid)
