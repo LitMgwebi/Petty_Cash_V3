@@ -41,7 +41,7 @@
         {
             try
             {
-                Division division = await _db.Divisions
+                Division? division = await _db.Divisions
                     .Where(a => a.IsActive == true)
                     .Include(d => d.Department)
                     .AsNoTracking()

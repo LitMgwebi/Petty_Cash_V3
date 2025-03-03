@@ -15,43 +15,43 @@ namespace Backend.Services.NotificationService
 
         protected override async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            //while (!cancellationToken.IsCancellationRequested)
-            //{
-            //    if (IsWeekday() && IsWithinWorkingHours())
-            //    {
-            //        using (var scope = serviceScopeFactory.CreateScope())
-            //        {
-            //            IRequisition _requisition = scope.ServiceProvider.GetRequiredService<IRequisition>();
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                if (IsWeekday() && IsWithinWorkingHours())
+                {
+                    using (var scope = serviceScopeFactory.CreateScope())
+                    {
+                        IRequisition _requisition = scope.ServiceProvider.GetRequiredService<IRequisition>();
 
-            //            ServerResponse<List<Requisition>> requisitionResponse = await _requisition.GetRequisitions("tracking");
-            //            List<Requisition> requisitions = requisitionResponse.Data!;
+                        ServerResponse<List<Requisition>> requisitionResponse = await _requisition.GetRequisitions("tracking");
+                        List<Requisition> requisitions = requisitionResponse.Data!;
 
-            //            if(requisitions != null)
-            //            {
-            //                foreach (var requisition in requisitions)
-            //                {
-            //                    if (requisition.ConfirmChangeReceived == false && requisition.IssueDate != null)
-            //                    {
-            //                        DateTime issueDate = (DateTime)requisition.IssueDate;
-            //                        DateTime dayAfterIssuing = issueDate.AddDays(1);
-            //                        // What happens after a weekend. Will the code still add one day and spazz out?
-            //                        if (dayAfterIssuing < DateTime.Now)
-            //                        {
-            //                            //email to tell user that 24 hrs has passed.
+                        if (requisitions != null)
+                        {
+                            foreach (var requisition in requisitions)
+                            {
+                                if (requisition.ConfirmChangeReceived == false && requisition.IssueDate != null)
+                                {
+                                    DateTime issueDate = (DateTime)requisition.IssueDate;
+                                    DateTime dayAfterIssuing = issueDate.AddDays(1);
+                                    // What happens after a weekend. Will the code still add one day and spazz out?
+                                    if (dayAfterIssuing < DateTime.Now)
+                                    {
+                                        //email to tell user that 24 hrs has passed.
 
-            //                            await Task.Delay(TimeSpan.FromHours(1), cancellationToken);
-            //                            // email a reminder to say that an hour has passed
-            //                        }
-            //                    }
-            //                }
-            //            }
-            //        }
-            //    }
-            //    else
-            //    {
-            //        await Task.Delay(TimeSpan.FromMinutes(15), cancellationToken);
-            //    }
-            //}
+                                        await Task.Delay(TimeSpan.FromHours(1), cancellationToken);
+                                        // email a reminder to say that an hour has passed
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    await Task.Delay(TimeSpan.FromMinutes(15), cancellationToken);
+                }
+            }
         }
 
         bool IsWeekday()

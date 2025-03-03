@@ -4,8 +4,6 @@ import { Branch } from "types/Branch";
 import { handleApiError } from "api/handleApiError";
 import axios from "axios";
 
-
-
 interface BranchContextProps {
     branches: Branch[];
     branch: Branch | null;

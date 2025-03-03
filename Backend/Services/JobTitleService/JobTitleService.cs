@@ -40,7 +40,7 @@
         {
             try
             {
-                JobTitle jobTitle = await _db.JobTitles
+                JobTitle? jobTitle = await _db.JobTitles
                     .Where(x => x.IsActive == true)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(i => i.JobTitleId == id);

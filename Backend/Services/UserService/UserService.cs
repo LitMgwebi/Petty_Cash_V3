@@ -40,10 +40,10 @@ namespace Backend.Services.UserService
         {
             try
             {
-                User user = await _db.Users
+                User? user = await _db.Users
                     .AsNoTracking()
                     .Include(d => d.Division)
-                    .ThenInclude(a => a.Department)
+                    .ThenInclude(a => a!.Department)
                     .Include(j => j.JobTitle)
                     .Where(a => a.IsActive == true)
                     .FirstOrDefaultAsync(e => e.Email == email);
@@ -59,7 +59,7 @@ namespace Backend.Services.UserService
         {
             try
             {
-                User user = await _db.Users
+                User? user = await _db.Users
                     .Include(d => d.Division)
                     .Include(j => j.JobTitle)
                     .Where(a => a.IsActive == true)

@@ -41,7 +41,7 @@
         {
             try
             {
-                Vault vault = await _db.Vaults
+                Vault? vault = await _db.Vaults
                     .Where(a => a.IsActive == true)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(i => i.VaultId == vaultId);

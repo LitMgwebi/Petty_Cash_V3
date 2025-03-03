@@ -40,7 +40,7 @@
         {
             try
             {
-                Branch Branch = await _db.Branches
+                Branch? Branch = await _db.Branches
                     .Where(a => a.IsActive == true)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(x => x.BranchId == id);

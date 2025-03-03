@@ -42,10 +42,10 @@
         {
             try
             {
-                Department department = await _db.Departments
-                .Where(a => a.IsActive == true)
+                Department? department = await _db.Departments
+                    .Where(a => a.IsActive == true)
                     .AsNoTracking()
-                .FirstOrDefaultAsync(x => x.DepartmentId == id);
+                    .FirstOrDefaultAsync(x => x.DepartmentId == id);
 
                 if (department == null)
                     return new ServerResponse<Department>

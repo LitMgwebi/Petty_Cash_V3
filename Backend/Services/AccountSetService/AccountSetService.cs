@@ -66,7 +66,7 @@
         {
             try
             {
-                AccountSet account = new AccountSet();
+                AccountSet? account = new AccountSet();
                 if (command == AccountSet.MainAccount)
                 {
                     account = await _db.AccountSets

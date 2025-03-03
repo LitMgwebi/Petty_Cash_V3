@@ -40,7 +40,7 @@
         {
             try
             {
-                Office office = await _db.Offices
+                Office? office = await _db.Offices
                     .Where(a => a.IsActive == true)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(i => i.OfficeId == id);

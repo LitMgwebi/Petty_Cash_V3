@@ -140,7 +140,7 @@
         {
             try
             {
-                Status status = await _db.Statuses
+                Status? status = await _db.Statuses
                     .Where(a => a.IsActive == true)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(i => i.StatusId == id);

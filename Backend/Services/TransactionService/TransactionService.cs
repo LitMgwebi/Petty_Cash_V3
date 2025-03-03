@@ -50,10 +50,10 @@ namespace Backend.Services.TransactionService
         {
             try
             {
-                Transaction transaction = await _db.Transactions
+                Transaction? transaction = await _db.Transactions
                     .Include(d => d.Depositor)
                     .Include(r => r.Requisition)
-                    .ThenInclude(a => a.Applicant)
+                    .ThenInclude(a => a!.Applicant)
                     .Include(v => v.Vault)
                     .Where(x => x.IsActive == true)
                     .AsNoTracking()

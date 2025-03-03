@@ -107,7 +107,7 @@ namespace Backend.Services.RequisitionService
         {
             try
             {
-                Requisition requisition = await _db.Requisitions
+                Requisition? requisition = await _db.Requisitions
                     .Include(m => m.ManagerRecommendation)
                     .Include(f => f.FinanceApproval)
                     .Include(m => m.Manager)

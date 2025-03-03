@@ -7,7 +7,7 @@
 
         public async Task<ServerResponse<Document>> GetOneDocument()
         {
-            Document document = await db.Documents
+            Document? document = await db.Documents
                 .OfType<Motivation>()
                 .Where(a => a.IsActive == true)
                 .Include(d => d.Requisition)

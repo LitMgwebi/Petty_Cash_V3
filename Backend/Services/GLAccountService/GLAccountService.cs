@@ -73,7 +73,7 @@ namespace Backend.Services.GLAccountService
         {
             try
             {
-                Glaccount glAccount = await _db.Glaccounts
+                Glaccount? glAccount = await _db.Glaccounts
                     .Where(a => a.IsActive == true)
                     .Include(x => x.Branch)
                     .Include(x => x.MainAccount)
