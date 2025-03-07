@@ -1,24 +1,15 @@
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route
-} from "react-router-dom";
-import Home from './pages/Home';
-import BranchIndex from "pages/Branch/BranchIndex"
-import Navbar from "components/Navbar";
+import { RouterProvider } from "react-router-dom";
+import { Suspense } from "react";
+import { router } from "api/router"
+import Loading from "components/Loading";
 import './App.css';
 
 function App() {
     return (
         <div className="App">
-            <Router>
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/branch" element={<BranchIndex />} />
-                    <Route path="*" element={<h2>404 - Not Found</h2>} />
-                </Routes>
-            </Router>
+            <Suspense fallback={<Loading open={true} />}>
+                <RouterProvider router={router} />
+            </Suspense>
         </div>
     );
 }

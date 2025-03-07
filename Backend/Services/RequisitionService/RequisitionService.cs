@@ -1,7 +1,5 @@
 ﻿using Backend.Services.AuthService;
 using Backend.Services.GLAccountService;
-using Backend.Services.JobTitleService;
-using Backend.Services.StatusService;
 using Backend.Services.TransactionService;
 using Backend.Services.UserService;
 using System.Security.Claims;
@@ -11,15 +9,13 @@ using Backend.Services.RequisitionService.CreateHandler;
 
 namespace Backend.Services.RequisitionService
 {
-    public class RequisitionService(BackendContext db, IUser user, IGLAccount gLAccount, IJobTitle jobTitle, ITransaction transaction, IStatus status, IHttpContextAccessor httpContextAccessor, IAuth auth) : IRequisition
+    public class RequisitionService(BackendContext db, IUser user, IGLAccount gLAccount, ITransaction transaction, IHttpContextAccessor httpContextAccessor, IAuth auth) : IRequisition
     {
         private BackendContext _db = db;
         private readonly IAuth _auth = auth;
         private readonly IUser _user = user;
         private readonly ITransaction _transaction = transaction;
         private readonly IGLAccount _glAccount = gLAccount;
-        private readonly IJobTitle _jobTitle = jobTitle;
-        private readonly IStatus _status = status;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
         private string GetUserId() => _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.NameIdentifier)!;

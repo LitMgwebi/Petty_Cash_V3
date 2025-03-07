@@ -4,3 +4,8 @@ export interface Branch {
     description: string;
     glaccounts: [];
 }
+
+export interface BranchError {
+    name: string;
+    description: string;
+}

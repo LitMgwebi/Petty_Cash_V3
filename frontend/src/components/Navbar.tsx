@@ -2,6 +2,7 @@ import { FC } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Typography, Toolbar, Box, AppBar, Container } from "@mui/material"
 import { Link } from "react-router-dom";
+import { Routes } from "api/router"
 
 const Navbar: FC = () => {
 
@@ -23,13 +24,12 @@ const Navbar: FC = () => {
                             Petty Cash
                         </Typography>
                         <Typography>
-                            <Link to="/branch">Branch</Link>
+                            <Link to={Routes.Branch}>Branch</Link>
                         </Typography>
-                        {/* <Button color="inherit">Login</Button> */}
                     </Toolbar>
                 </Box>
-            </Container>
-        </AppBar>
+            </Container >
+        </AppBar >
     );
 }
 

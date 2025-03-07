@@ -44,7 +44,7 @@ namespace Backend.Controllers
         #region PUT
 
         [HttpPut, Route("edit")]
-        public async Task<ActionResult> Edit(Branch branch)
+        public async Task<ActionResult> Edit([FromBody]Branch branch)
         {
             if (!ModelState.IsValid)
                 return BadRequest(new { Message = "Model state passed is incorrect." });
@@ -59,7 +59,7 @@ namespace Backend.Controllers
 
         // DELETE api/<PurposesController>/5
         [HttpDelete, Route("delete")]
-        public async Task<ActionResult> Delete(Branch branch)
+        public async Task<ActionResult> Delete([FromBody]Branch branch)
         {
             if (!ModelState.IsValid)
                 return BadRequest(new { Message = "Model state passed is incorrect." });
