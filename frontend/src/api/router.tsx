@@ -1,11 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import Layout from "components/Layout";
+import { PublicRoute } from "components/PublicRoute";
+import { ProtectedRoute } from "components/ProtectedRoute";
+import NotFound from "pages/NotFound";
 
 export const Routes = {
     Home: "/",
-    Branch: "/branch"
-}
+    Branch: "/branch",
+    Dashboard: "/dashboard",
+    Login: "/login",
+    Register: "/register",
+};
 
 export const router = createBrowserRouter([
     {
@@ -13,13 +19,41 @@ export const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                path: Routes.Home,
+                index: true,
                 Component: lazy(() => import("pages/Home")),
             },
             {
-                path: "/branch",
-                Component: lazy(() => import("pages/Branch/BranchIndex"))
+                element: <PublicRoute />,
+                children: [
+                    {
+                        path: Routes.Login,
+                        Component: lazy(() => import("pages/Auth/Login")),
+                    },
+                    {
+                        path: Routes.Register,
+                        Component: lazy(() => import("pages/Auth/Register")),
+                    },
+                ],
             },
-        ]
-    }
+            {
+                element: <ProtectedRoute />,
+                children: [
+                    {
+                        path: Routes.Dashboard,
+                        Component: lazy(() => import("pages/Dashboard")),
+                    },
+                    {
+                        path: Routes.Branch,
+                        Component: lazy(
+                            () => import("pages/Branch/BranchIndex")
+                        ),
+                    },
+                ],
+            },
+            {
+                path: "*",
+                element: <NotFound />,
+            },
+        ],
+    },
 ]);

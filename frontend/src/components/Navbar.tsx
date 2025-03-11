@@ -1,11 +1,17 @@
 import { FC } from "react";
-import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Typography, Toolbar, Box, AppBar, Container } from "@mui/material"
+import MenuIcon from "@mui/icons-material/Menu";
+import {
+    IconButton,
+    Typography,
+    Toolbar,
+    Box,
+    AppBar,
+    Container,
+} from "@mui/material";
 import { Link } from "react-router-dom";
-import { Routes } from "api/router"
+import { Routes } from "api/router";
 
 const Navbar: FC = () => {
-
     return (
         <AppBar position="static">
             <Container>
@@ -20,17 +26,24 @@ const Navbar: FC = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Typography
+                            variant="h6"
+                            component="div"
+                            sx={{ flexGrow: 1 }}
+                        >
                             Petty Cash
                         </Typography>
                         <Typography>
-                            <Link to={Routes.Branch}>Branch</Link>
+                            <Link to={Routes.Register}>Register</Link>
+                        </Typography>
+                        <Typography>
+                            <Link to={Routes.Login}>Login</Link>
                         </Typography>
                     </Toolbar>
                 </Box>
-            </Container >
-        </AppBar >
+            </Container>
+        </AppBar>
     );
-}
+};
 
 export default Navbar;
