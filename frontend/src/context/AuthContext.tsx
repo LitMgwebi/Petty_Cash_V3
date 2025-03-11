@@ -42,7 +42,7 @@ const authReducer = (state: AuthState, action: AuthAction): AuthState => {
 interface AuthContextProps {
     token: Token | null;
     registerUser: (user: Register) => Promise<ServerResponse<Token>>;
-    loginUser: (user: Login) => Promise<void>;
+    loginUser: (user: Login) => Promise<ServerResponse<Token>>;
     logoutUser: () => void;
 }
 
@@ -68,9 +68,15 @@ export function AuthProvider({
         }
     }
 
-    async function loginUser(user: Login) {
+    async function loginUser(user: Login): Promise<ServerResponse<Token>> {
         try {
-        } catch (error) {}
+            const res = await axios.post<ServerResponse<Token>>(``, user);
+
+            dispatch({ type: "SET_TOKEN", payload: res.data.data });
+            return res.data;
+        } catch (error) {
+            return handleApiError<Token>(error);
+        }
     }
 
     function logoutUser() {
