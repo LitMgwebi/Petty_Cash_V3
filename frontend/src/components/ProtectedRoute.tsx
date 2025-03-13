@@ -6,9 +6,9 @@ import { Routes } from "api/router";
 export function ProtectedRoute(): ReactElement {
     const { token } = useAuthContext();
 
-    if (!token) {
-        return <Navigate to={Routes.Login} replace />;
-    }
+    // if (!token) {
+    //     return <Navigate to={Routes.Login} replace />;
+    // }
 
     return <Outlet />;
 }

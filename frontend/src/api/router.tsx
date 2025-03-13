@@ -11,6 +11,7 @@ export const Routes = {
     Dashboard: "/dashboard",
     Login: "/login",
     Register: "/register",
+    Office: "/office",
 };
 
 export const router = createBrowserRouter([
@@ -46,6 +47,12 @@ export const router = createBrowserRouter([
                         path: Routes.Branch,
                         Component: lazy(
                             () => import("pages/Branch/BranchIndex")
+                        ),
+                    },
+                    {
+                        path: Routes.Office,
+                        Component: lazy(
+                            () => import("pages/Office/OfficeIndex")
                         ),
                     },
                 ],
