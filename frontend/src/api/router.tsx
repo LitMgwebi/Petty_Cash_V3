@@ -12,6 +12,7 @@ export const Routes = {
     Login: "/login",
     Register: "/register",
     Office: "/office",
+    Division: "/division",
 };
 
 export const router = createBrowserRouter([
@@ -53,6 +54,12 @@ export const router = createBrowserRouter([
                         path: Routes.Office,
                         Component: lazy(
                             () => import("pages/Office/OfficeIndex")
+                        ),
+                    },
+                    {
+                        path: Routes.Division,
+                        Component: lazy(
+                            () => import("pages/Division/DivisionIndex")
                         ),
                     },
                 ],

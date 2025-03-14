@@ -9,6 +9,7 @@
             try
             {
                 IEnumerable<Division> divisions = await _db.Divisions
+                    .Include(d => d.Department)
                     .Where(x => x.IsActive == true)
                     .AsNoTracking()
                     .ToListAsync();

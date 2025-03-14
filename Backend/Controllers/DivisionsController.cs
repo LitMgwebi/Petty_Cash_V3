@@ -4,7 +4,7 @@ namespace Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class DivisionsController : ControllerBase
     {
         private readonly IDivision _division;

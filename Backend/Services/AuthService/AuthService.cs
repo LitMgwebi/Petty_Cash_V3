@@ -149,10 +149,10 @@ namespace Backend.Services.AuthService
                     UserName = userRegister.Email,
                     Firstname = userRegister.FirstName,
                     Lastname = userRegister.LastName,
-                    PhoneNumber = userRegister.PhoneNumber,
-                    DivisionId = userRegister.DivisionId,
-                    JobTitleId = userRegister.JobTitleId,
-                    OfficeId = userRegister.OfficeId,
+                    //PhoneNumber = userRegister.PhoneNumber,
+                    //DivisionId = userRegister.DivisionId,
+                    //JobTitleId = userRegister.JobTitleId,
+                    //OfficeId = userRegister.OfficeId,
                     IsActive = true,
                 };
 

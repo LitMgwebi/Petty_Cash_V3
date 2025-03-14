@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\controllers\\officescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:controllers\\officescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\controllers\\divisionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:controllers\\divisionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\divisonservice\\divisonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\divisonservice\\divisonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\controllers\\jobtitlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:controllers\\jobtitlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 121,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,32 +58,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DepartmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\DepartmentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\DepartmentsController.cs",
-              "RelativeToolTip": "Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T08:09:21.492Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OfficesController.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\OfficesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OfficesController.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\OfficesController.cs",
-              "RelativeToolTip": "Controllers\\OfficesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T08:08:41.156Z",
+              "WhenOpened": "2025-03-13T13:25:52.111Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DivisonService.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DivisonService\\DivisonService.cs",
+              "RelativeDocumentMoniker": "Services\\DivisonService\\DivisonService.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DivisonService\\DivisonService.cs",
+              "RelativeToolTip": "Services\\DivisonService\\DivisonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:39:06.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DivisionsController.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\DivisionsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DivisionsController.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\DivisionsController.cs",
+              "RelativeToolTip": "Controllers\\DivisionsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:22:58.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JobTitlesController.cs",
+              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\JobTitlesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JobTitlesController.cs",
+              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\JobTitlesController.cs",
+              "RelativeToolTip": "Controllers\\JobTitlesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T08:22:53.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -87,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -99,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\AuthService\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\AuthService\\AuthService.cs",

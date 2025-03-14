@@ -46,24 +46,24 @@ export const OfficeList: FC<ListOfficeProps> = ({
         }
     };
 
-    const handleEditClick = (branchId: GridRowId) => () => {
+    const handleEditClick = (officeId: GridRowId) => () => {
         setRowsModesModel({
             ...rowModesModel,
-            [branchId]: { mode: GridRowModes.Edit },
+            [officeId]: { mode: GridRowModes.Edit },
         });
     };
 
-    const handleSaveClick = (branchId: GridRowId) => () => {
+    const handleSaveClick = (officeId: GridRowId) => () => {
         setRowsModesModel({
             ...rowModesModel,
-            [branchId]: { mode: GridRowModes.View },
+            [officeId]: { mode: GridRowModes.View },
         });
     };
 
-    const handleCancelClick = (branchId: GridRowId) => () => {
+    const handleCancelClick = (officeId: GridRowId) => () => {
         setRowsModesModel({
             ...rowModesModel,
-            [branchId]: { mode: GridRowModes.View, ignoreModifications: true },
+            [officeId]: { mode: GridRowModes.View, ignoreModifications: true },
         });
     };
 
@@ -73,7 +73,7 @@ export const OfficeList: FC<ListOfficeProps> = ({
         );
 
         if (office !== undefined) setOfficeToDelete(office);
-        else setError("System could not resolve Branch ID when deleting.");
+        else setError("System could not resolve Office ID when deleting.");
     };
 
     const handleRowModesModelChange = (newRowModesModel: GridRowModesModel) => {

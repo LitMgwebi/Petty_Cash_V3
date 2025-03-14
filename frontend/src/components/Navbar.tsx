@@ -34,7 +34,7 @@ const Navbar: FC = () => {
                             Petty Cash
                         </Typography>
                         {/* <Typography>
-                            <Link to={Routes.Office}>Offices</Link>
+                            <Link to={Routes.Division}>Division</Link>
                         </Typography> */}
                         <Typography>
                             <Link to={Routes.Register}>Register</Link>

@@ -4,7 +4,7 @@ namespace Backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class DepartmentsController : ControllerBase
     {
         private readonly IDepartment _department;
