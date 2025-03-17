@@ -1,4 +1,6 @@
-﻿namespace Backend.Services.RequisitionService.EditHandler
+﻿using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
+namespace Backend.Services.RequisitionService.EditHandler
 {
     public class AddDocumentState : IEditState
     {
@@ -10,7 +12,7 @@
 
         public async Task<ServerResponse<Requisition>> EditRequisition(BackendContext _db, Requisition requisition)
         {
-            if (type == Document.Motivation)
+            if (type == Requisition.editStates.AddMotivation)
             {
                 requisition.Stage = "Motivation has been uploaded. Requisition has been sent for recommendation.";
                 _db.Requisitions.Update(requisition);
@@ -27,7 +29,7 @@
                         Message = " and requisition details have been updated with motivation information."
                     };
             }
-            else if (type == Document.Receipt)
+            else if (type == Requisition.editStates.AddReceipt)
             {
                 requisition.Stage = "Receipt has been uploaded.";
                 requisition.ReceiptReceived = true;

@@ -22,7 +22,7 @@ namespace Backend.Services.RequisitionService
 
         private string GetUserRole() => _httpContextAccessor.HttpContext!.User.FindFirstValue(ClaimTypes.Role)!;
 
-        public async Task<ServerResponse<List<Requisition>>> GetRequisitions(string command, int divisionId, int jobTitleId, int statusId, string issuedState)
+        public async Task<ServerResponse<List<Requisition>>> GetRequisitions(string command)
         {
             try
             {
@@ -180,7 +180,7 @@ namespace Backend.Services.RequisitionService
             }
         }
 
-        public async Task<ServerResponse<Requisition>> EditRequisition(Requisition requisition, string command, string userId, int attemptCode, bool forDoc, bool addDoc, bool deleteDoc)
+        public async Task<ServerResponse<Requisition>> EditRequisition(Requisition requisition, string command, int attemptCode)
         {
             try
             {
@@ -192,12 +192,12 @@ namespace Backend.Services.RequisitionService
 
                 if (command == Requisition.editStates.Recommendation)
                 {
-                    editor.setState(new RecommendationState(reviewRequisition, userId));
+                    editor.setState(new RecommendationState(reviewRequisition, GetUserId()));
                     response = await editor.request(_db, requisition);
                 }
                 else if (command == Requisition.editStates.Approval)
                 {
-                    editor.setState(new ApprovalState(reviewRequisition, userId));
+                    editor.setState(new ApprovalState(reviewRequisition, GetUserId()));
                     response = await editor.request(_db, requisition);
                 }
                 else if (command == Requisition.editStates.Edit)
@@ -207,7 +207,7 @@ namespace Backend.Services.RequisitionService
                 }
                 else if (command == Requisition.editStates.Issuing)
                 {
-                    editor.setState(new IssuingState(_transaction, userId, attemptCode));
+                    editor.setState(new IssuingState(_transaction, GetUserId(), attemptCode));
                     response = await editor.request(_db, requisition);
                 }
                 else if (command == Requisition.editStates.Expenses)
@@ -225,12 +225,13 @@ namespace Backend.Services.RequisitionService
                     editor.setState(new CloseState(_transaction));
                     response = await editor.request(_db, requisition);
                 }
-                else if (forDoc == true && addDoc == true)
+                else if (command == Requisition.editStates.AddMotivation || command == Requisition.editStates.AddReceipt)
                 {
+                    //Todo This code might have update errors. The command that this state receives is from Requisition and the code that might request this state might be using Document for its command. So just beware. Need to make the same edits as on DeleteMotivationState and DeleteReceiptState.
                     editor.setState(new AddDocumentState(command));
                     response = await editor.request(_db, requisition);
                 }
-                else if (forDoc == true && deleteDoc == true)
+                else if (command == Requisition.editStates.DeleteMotivation || command == Requisition.editStates.DeleteReceipt)
                 {
                     editor.setState(new DeleteDocumentState(command));
                     response = await editor.request(_db, reviewRequisition);

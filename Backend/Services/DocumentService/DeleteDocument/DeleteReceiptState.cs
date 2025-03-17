@@ -22,7 +22,7 @@ namespace Backend.Services.DocumentService.DeleteDocument
                     };
 
                 //TODO: code to edit the state of the requisition linked to this receipt goes here
-                ServerResponse<Requisition> response = await _requisition.EditRequisition(requisition, Document.Receipt, forDoc: true, deleteDoc: true);
+                ServerResponse<Requisition> response = await _requisition.EditRequisition(requisition, Requisition.editStates.DeleteReceipt);
 
                 if (response.Success == false)
                     return new ServerResponse<Document>

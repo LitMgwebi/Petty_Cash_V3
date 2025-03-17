@@ -17,13 +17,35 @@ namespace Backend.Controllers
 
         [HttpGet, Route("index")]
         [AllowAnonymous]
-        public async Task<ActionResult> Index(string command)
+        public async Task<ActionResult> Index()
         {
-            ServerResponse<IEnumerable<Glaccount>> response = await _glAccount.GetGlAccounts(command);
+            ServerResponse<IEnumerable<Glaccount>> response = await _glAccount.GetGlAccounts("all");
 
             if (response.Success == false) return BadRequest(response);
             return Ok(response);
         }
+        
+        [HttpGet, Route("indexByDivision")]
+        [AllowAnonymous]
+        public async Task<ActionResult> IndexByDivision()
+        {
+            ServerResponse<IEnumerable<Glaccount>> response = await _glAccount.GetGlAccounts("division");
+
+            if (response.Success == false) return BadRequest(response);
+            return Ok(response);
+        }
+        
+        [HttpGet, Route("indexByOffice")]
+        [AllowAnonymous]
+        public async Task<ActionResult> IndexByOffice()
+        {
+            ServerResponse<IEnumerable<Glaccount>> response = await _glAccount.GetGlAccounts("office");
+
+            if (response.Success == false) return BadRequest(response);
+            return Ok(response);
+        }
+
+
         [HttpGet, Route("details")]
         [AllowAnonymous]
         public async Task<ActionResult> Details(int id)

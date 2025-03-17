@@ -6,7 +6,7 @@
 
         public async Task<ServerResponse<Requisition>> EditRequisition(BackendContext _db, Requisition requisition)
         {
-            if (type == Document.Motivation)
+            if (type == Requisition.editStates.DeleteMotivation)
             {
                 if (!requisition.Documents.OfType<Motivation>().Where(g => g.IsActive).Any())
                 {
@@ -32,7 +32,7 @@
                     Message = "...."
                 };
             }
-            else if (type == Document.Receipt)
+            else if (type == Requisition.editStates.DeleteReceipt)
             {
                 if (!requisition.Documents.OfType<Receipt>().Where(g => g.IsActive).Any())
                 {

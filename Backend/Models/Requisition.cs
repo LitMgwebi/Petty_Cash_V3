@@ -110,6 +110,10 @@ namespace Backend.Models
             public const string Expenses = "expenses";
             public const string Return = "return";
             public const string Close = "close";
+            public const string AddMotivation = "addMotivation";
+            public const string AddReceipt = "addReceipt";
+            public const string DeleteMotivation = "deleteMotivation";
+            public const string DeleteReceipt = "deleteReceipt";
         }
 
         public struct getStates
