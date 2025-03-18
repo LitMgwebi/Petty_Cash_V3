@@ -1,6 +1,5 @@
 ﻿using Backend.Services.AuthService;
 using Backend.Services.RequisitionService.IndexHandler.RecommendationStructureService;
-using Microsoft.CodeAnalysis.Recommendations;
 
 namespace Backend.Services.RequisitionService.IndexHandler
 {
@@ -12,14 +11,14 @@ namespace Backend.Services.RequisitionService.IndexHandler
         {
             ServerResponse<List<Requisition>> response = new();
 
-            IRecommender GM = new GeneralManager(db);
-            IRecommender Manager = new Manager(db);
-            IRecommender Deputy = new Deputy(db, _auth);
+            IRecommender GM = new GeneralManager();
+            IRecommender Manager = new Manager();
+            IRecommender Deputy = new Deputy();
 
             GM.SetNext(Manager);
             Manager.SetNext(Deputy);
 
-            response = await GM.GetRequisitionsForRecommendation(user);
+            response = await GM.GetRequisitionsForRecommendation(user, db, _auth);
 
             return response;
         }

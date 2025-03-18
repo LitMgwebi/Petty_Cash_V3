@@ -2,15 +2,13 @@
 
 namespace Backend.Services.RequisitionService.IndexHandler.RecommendationStructureService
 {
-    public class Deputy(BackendContext db, IAuth auth) : IRecommender
+    public class Deputy() : IRecommender
     {
         private IRecommender? nextRecommender;
-        private BackendContext _db = db;
-        private IAuth _auth = auth;
 
         public void SetNext(IRecommender? nextRecommender) => this.nextRecommender = nextRecommender;
 
-        public async Task<ServerResponse<List<Requisition>>> GetRequisitionsForRecommendation(User loggedInUser)
+        public async Task<ServerResponse<List<Requisition>>> GetRequisitionsForRecommendation(User loggedInUser, BackendContext _db, IAuth _auth)
         {
             ServerResponse<List<Requisition>> response = new();
             List<Requisition> requisitions = new();

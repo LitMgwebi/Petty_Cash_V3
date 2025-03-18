@@ -1,9 +1,12 @@
-﻿namespace Backend.Services.RequisitionService.IndexHandler.FinanceApprovalService
+﻿using Backend.Services.AuthService;
+
+namespace Backend.Services.RequisitionService.IndexHandler.FinanceApprovalService
 {
-    public class Manager(BackendContext db) : IFinanceApproval
+    public class Manager(BackendContext db, IAuth auth) : IFinanceApproval
     {
         private IFinanceApproval? nextOfficer;
         private BackendContext _db = db;
+        private IAuth _auth = auth;
 
         public void SetNext(IFinanceApproval nextOfficer) => this.nextOfficer = nextOfficer;
 
@@ -11,7 +14,7 @@
         public async Task<ServerResponse<List<Requisition>>> GetRequisitionsForApproval(User loggedInUser)
         {
             List<Requisition> requisitions = new();
-            if (loggedInUser.JobTitleId == JobTitle.Manager)
+            if (_auth.ValidateUserRole("Manager"))
             {
                 requisitions = await _db.Requisitions
                    .Include(a => a.Applicant)

@@ -1,40 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\documentservice\\deletedocument\\deletereceiptstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\documentservice\\deletedocument\\deletereceiptstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\documentservice\\deletedocument\\deletemotivationstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\documentservice\\deletedocument\\deletemotivationstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\requisitionservice\\edithandler\\deletedocumentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\requisitionservice\\edithandler\\deletedocumentstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\requisitionservice\\requisitionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\requisitionservice\\requisitionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\services\\requisitionservice\\irequisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:services\\requisitionservice\\irequisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\models\\requisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:models\\requisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\controllers\\requisitionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:controllers\\requisitionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|c:\\users\\lithi\\onedrive\\documents\\github\\petty_cash_v3\\backend\\viewmodel\\editrequisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E16DAA85-539A-4B5F-95BA-DDAC4103A954}|Backend.csproj|solutionrelative:viewmodel\\editrequisition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -42,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 121,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DeleteMotivationState.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DocumentService\\DeleteDocument\\DeleteMotivationState.cs",
-              "RelativeDocumentMoniker": "Services\\DocumentService\\DeleteDocument\\DeleteMotivationState.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DocumentService\\DeleteDocument\\DeleteMotivationState.cs",
-              "RelativeToolTip": "Services\\DocumentService\\DeleteDocument\\DeleteMotivationState.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAABnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:27:02.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EditRequisition.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\ViewModel\\EditRequisition.cs",
-              "RelativeDocumentMoniker": "ViewModel\\EditRequisition.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\ViewModel\\EditRequisition.cs",
-              "RelativeToolTip": "ViewModel\\EditRequisition.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:14:31.783Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -85,90 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RequisitionsController.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\RequisitionsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RequisitionsController.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Controllers\\RequisitionsController.cs",
-              "RelativeToolTip": "Controllers\\RequisitionsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:09:05.238Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 121,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteReceiptState.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DocumentService\\DeleteDocument\\DeleteReceiptState.cs",
-              "RelativeDocumentMoniker": "Services\\DocumentService\\DeleteDocument\\DeleteReceiptState.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\DocumentService\\DeleteDocument\\DeleteReceiptState.cs",
-              "RelativeToolTip": "Services\\DocumentService\\DeleteDocument\\DeleteReceiptState.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwBgAAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:38:38.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteDocumentState.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\EditHandler\\DeleteDocumentState.cs",
-              "RelativeDocumentMoniker": "Services\\RequisitionService\\EditHandler\\DeleteDocumentState.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\EditHandler\\DeleteDocumentState.cs",
-              "RelativeToolTip": "Services\\RequisitionService\\EditHandler\\DeleteDocumentState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:38:04.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IRequisition.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\IRequisition.cs",
-              "RelativeDocumentMoniker": "Services\\RequisitionService\\IRequisition.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\IRequisition.cs",
-              "RelativeToolTip": "Services\\RequisitionService\\IRequisition.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAB9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:31:47.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Requisition.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Models\\Requisition.cs",
-              "RelativeDocumentMoniker": "Models\\Requisition.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Models\\Requisition.cs",
-              "RelativeToolTip": "Models\\Requisition.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAA9wHIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:17:29.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RequisitionService.cs",
-              "DocumentMoniker": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\RequisitionService.cs",
-              "RelativeDocumentMoniker": "Services\\RequisitionService\\RequisitionService.cs",
-              "ToolTip": "C:\\Users\\lithi\\OneDrive\\Documents\\Github\\Petty_Cash_V3\\Backend\\Services\\RequisitionService\\RequisitionService.cs",
-              "RelativeToolTip": "Services\\RequisitionService\\RequisitionService.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAAAOgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T08:09:40.808Z",
-              "EditorCaption": ""
             }
           ]
         }

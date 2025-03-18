@@ -1,18 +1,19 @@
-﻿namespace Backend.Services.RequisitionService.IndexHandler.RecommendationStructureService
+﻿using Backend.Services.AuthService;
+
+namespace Backend.Services.RequisitionService.IndexHandler.RecommendationStructureService
 {
-    public class Manager(BackendContext db) : IRecommender
+    public class Manager() : IRecommender
     {
         private IRecommender nextRecommender = null!;
-        private BackendContext _db = db;
 
         public void SetNext(IRecommender nextRecommender) => this.nextRecommender = nextRecommender;
 
-        public async Task<ServerResponse<List<Requisition>>> GetRequisitionsForRecommendation(User loggedInUser)
+        public async Task<ServerResponse<List<Requisition>>> GetRequisitionsForRecommendation(User loggedInUser, BackendContext _db, IAuth _auth)
         {
             ServerResponse<List<Requisition>> response = new();
             List<Requisition> requisitions = new();
 
-            if (loggedInUser.JobTitleId == JobTitle.Manager)
+            if (_auth.ValidateUserRole("Manager"))
             {
                 requisitions = await _db.Requisitions
                    .Include(a => a.Applicant)
@@ -42,7 +43,7 @@
             else
             {
                 if (nextRecommender != null)
-                    return await nextRecommender.GetRequisitionsForRecommendation(loggedInUser);
+                    return await nextRecommender.GetRequisitionsForRecommendation(loggedInUser, _db, _auth);
                 else
                 {
                     return new ServerResponse<List<Requisition>>

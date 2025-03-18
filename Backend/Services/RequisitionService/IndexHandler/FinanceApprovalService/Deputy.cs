@@ -4,7 +4,6 @@ namespace Backend.Services.RequisitionService.IndexHandler.FinanceApprovalServic
 {
     public class Deputy(BackendContext db, IAuth auth) : IFinanceApproval
     {
-        //private IFinanceApproval nextOfficer = null!;
         private BackendContext _db = db;
         private IAuth _auth = auth;
 

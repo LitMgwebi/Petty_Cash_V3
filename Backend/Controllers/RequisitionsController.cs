@@ -35,7 +35,8 @@ namespace Backend.Controllers
 
             return response.Success ? Ok(response) : BadRequest(response);
         }
-        
+
+        [Authorize(Policy ="Management")]
         [HttpGet, Route("indexForRecommendation")]
         public async Task<ActionResult> IndexForRecommendation()
         {
@@ -45,7 +46,8 @@ namespace Backend.Controllers
 
             return response.Success ? Ok(response) : BadRequest(response);
         }
-        
+
+        [Authorize(Policy = "Management")]
         [HttpGet, Route("indexForApproval")]
         public async Task<ActionResult> IndexForApproval()
         {

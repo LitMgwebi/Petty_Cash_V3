@@ -14,13 +14,13 @@ namespace Backend.Services.RequisitionService.IndexHandler
             {
 
                 IFinanceApproval Deputy = new Deputy(db, _auth);
-                IFinanceApproval Manager = new Manager(db);
-                IFinanceApproval CFO = new CFO(db);
+                IFinanceApproval Manager = new Manager(db, _auth);
+                IFinanceApproval GeneralManager = new GeneralManager(db, _auth);
 
-                CFO.SetNext(Manager);
+                GeneralManager.SetNext(Manager);
                 Manager.SetNext(Deputy);
 
-                response = await CFO.GetRequisitionsForApproval(user);
+                response = await GeneralManager.GetRequisitionsForApproval(user);
             }
             else
             {

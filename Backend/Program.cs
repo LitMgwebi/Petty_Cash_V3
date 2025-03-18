@@ -103,7 +103,10 @@ try
     builder.Services.AddAuthentication();
     builder.Services.AddAuthorization(options =>
     {
-        options.AddPolicy("StudentAdminPolicy", policy => policy.RequireRole("Student", "Admin"));
+        options.AddPolicy("Management", policy =>
+        {
+            policy.RequireRole("Deputy", "Manager", "General Manager");
+        });
     });
 
 
@@ -198,6 +201,7 @@ try
     app.Run();
 
     #endregion
+
 } catch (Exception ex)
 {
     Console.WriteLine($"Unhandled Exception: ${ex}");
