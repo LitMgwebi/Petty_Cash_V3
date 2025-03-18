@@ -4,20 +4,25 @@ import { BranchProvider } from "./BranchContext";
 import { DepartmentProvider } from "./DepartmentContext";
 import { OfficeProvider } from "./OfficeContext";
 import { DivisionProvider } from "./DivisionContext";
+import { AccountSetProvider } from "./AccountSetContext";
 import { FC, ReactNode } from "react";
 
 const AppProviders: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <AuthProvider>
-            <OfficeProvider>
-                <DivisionProvider>
-                    <BranchProvider>
-                        <JobTitleProvider>
-                            <DepartmentProvider>{children}</DepartmentProvider>
-                        </JobTitleProvider>
-                    </BranchProvider>
-                </DivisionProvider>
-            </OfficeProvider>
+            <AccountSetProvider>
+                <OfficeProvider>
+                    <DivisionProvider>
+                        <BranchProvider>
+                            <JobTitleProvider>
+                                <DepartmentProvider>
+                                    {children}
+                                </DepartmentProvider>
+                            </JobTitleProvider>
+                        </BranchProvider>
+                    </DivisionProvider>
+                </OfficeProvider>
+            </AccountSetProvider>
         </AuthProvider>
     );
 };
